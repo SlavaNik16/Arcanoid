@@ -148,6 +148,9 @@ namespace Arcanoid
 
             var gr = this.CreateGraphics();
             gr.DrawImage(scene, 0, 0);
+            
+            long totalMemory = GC.GetTotalMemory(false);
+            GC.Collect(0,GCCollectionMode.Forced); 
         }
 
         private void Form1_Click(object sender, EventArgs e)
