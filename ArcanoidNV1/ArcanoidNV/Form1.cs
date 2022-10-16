@@ -22,7 +22,6 @@ namespace ArcanoidNV
         public Random rnd;
 
         private readonly List<Wall> walls;
-        public Color color;
         double dx = 1,dy = -1, scout = 0, x=0;
 
         bool runnin = false;
@@ -37,8 +36,6 @@ namespace ArcanoidNV
             InitImage();
             f = new System.Drawing.Text.PrivateFontCollection();
             f.AddFontFile("Font/Pixel1.ttf");
-
-            color = new Color();
 
             player = new Player();
             player.X = ClientRectangle.Width / 2 - 100;
